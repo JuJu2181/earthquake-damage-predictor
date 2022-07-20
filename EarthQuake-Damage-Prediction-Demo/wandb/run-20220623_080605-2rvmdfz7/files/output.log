@@ -1,0 +1,2 @@
+wandb: ERROR Find detailed error logs at: d:\Documents\Hackathon\Microsoft Virtual Hackathon\EarthQuake-Damage-Prediction\wandb\debug-cli.log
+Error: api_key not configured (no-tty). call wandb login [your_api_key]

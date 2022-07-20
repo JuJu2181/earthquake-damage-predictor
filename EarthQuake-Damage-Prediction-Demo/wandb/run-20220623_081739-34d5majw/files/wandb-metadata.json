@@ -1,0 +1,21 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.5",
+    "heartbeatAt": "2022-06-23T02:32:48.789528",
+    "startedAt": "2022-06-23T02:32:39.552982",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/RochakSedai/EarthQuake-Damage-Prediction.git",
+        "commit": "7a5038b7dc97b040d882c707f6d4bf51cb270967"
+    },
+    "email": "anishshilpakar8@gmail.com",
+    "root": "D:/Documents/Hackathon/Microsoft Virtual Hackathon/EarthQuake-Damage-Prediction",
+    "host": "nightfury",
+    "username": "dell",
+    "executable": "d:\\Programming\\Python\\.aivenv\\Scripts\\python.exe"
+}

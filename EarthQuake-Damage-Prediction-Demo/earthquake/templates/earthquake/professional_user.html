@@ -1,0 +1,290 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Earthquake Building Damage Prediction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'earthquake/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'earthquake/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'earthquake/css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'earthquake/css/dami.css' %}">
+    <link rel="stylesheet" href="{% static 'earthquake/css/professional.css' %}">
+</head>
+
+<section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{% url 'homepage' %}">EQDMGPRED</a></h1>
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="{% url 'homepage' %}">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About Project</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <div id="wrap" class="input">
+    <header class="input-header">
+      <h1>Enter Some Details to Predict Damage</h1>
+    </header>
+    <form action="{% url 'addprofessionalUserData' %}" method="POST" >
+
+      {% csrf_token %}
+    <section class="input-content">
+      
+      <div class="input-content-wrap">
+        <!--<div class="col-md-6">
+            <label for="Floor Before eq" class="form-label">Floors Before Earthquake</label>
+            <input type="number" class="form-control" id="Floor Before eq" required>
+          </div>
+          <div class="col-md-6">
+            <label for="Floor after eq" class="form-label">Floors After Earthquake</label>
+            <input type="number" class="form-control" id="Floor after eq">
+          </div>
+          <div class="col-md-6">
+            <label for="Floor Before eq" class="form-label">Floors Before Earthquake</label>
+            <input type="number" class="form-control" id="Floor Before eq">
+          </div>
+          <div class="col-md-6">
+            <label for="Floor after eq" class="form-label">Floors After Earthquake</label>
+            <input type="number" class="form-control" id="Floor after eq">
+          </div>
+        <div class="btns">
+            <input type="submit" value="Submit" class="btn btn-confirm">
+             
+            <button class="btn btn-cancel">Cancel</button>
+        </div>
+      </div> 
+    </section> -->
+    <div class="mahi_holder">
+        <div class="container">
+          <div class="row bg_1">
+            <h2><i>Enter Details<span>All Mandatory</span></i></h2>
+            
+            <div class="col-3">
+                <label for="Floor Before eq" class="form-label">Floors Before Earthquake</label>
+              <input class="effect-8"  name="fl_bf_earthquake" type="number" placeholder="Eg. 6" required>
+            </div>
+
+            <div class="col-3">
+            <label for="Floor after eq" class="form-label">Floors After Earthquake</label>
+              <input class="effect-9" name="fl_af_earthquake" type="number" placeholder="Eg. 6">
+            </div>
+
+            <div class="col-3">
+                <label for="Height before eq" class="form-label">Height Before Earthquake</label>
+                <input class="effect-9" name="ht_bf_earthquake" type="number" placeholder="Eg. 9" required>
+              </div>
+
+              <div class="col-3">
+                <label for="Height after eq" class="form-label">Height After Earthquake</label>
+                  <input class="effect-9" name="ht_af_earthquake" type="number" placeholder="Eg. 9" required>
+                </div>
+
+                <div class="col-3">
+                    <label for="building age" class="form-label">Age of Building</label>
+                      <input class="effect-9" name="building_age" type="number" placeholder="Eg. 4" required>    
+                </div>
+
+                <div class="col-3">
+                    <label for="plinth area" class="form-label">Plinth Area in Sq.ft</label>
+                      <input class="effect-9" name="plinth_area" type="number" placeholder="Eg. 420" required>    
+                </div>
+
+                <div class="col-3">
+                    <label for="foundation type" class="form-label">Foundation Type</label>
+                      <!-- <input class="effect-9" name="foundation_type" type="text" placeholder="Placeholder Text" required>    -->
+                      <select id="inputState" name="foundation_type" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Other</option>
+                        <option>Mud mortar-Stone/Brick</option>
+                        <option>Cement-Stone/Brick</option>
+                        <option>Bamboo/Timber</option>
+                        <option>RC</option>
+                      </select> 
+                </div>
+
+                <div class="col-3">
+                    <label for="roof type" class="form-label">Roof Type</label> 
+                      <select id="inputState" name="roof_type" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Bamboo/Timber-Heavy roof</option>
+                        <option>Bamboo/Timber-Light roof</option>
+                        <option>RCC/RB/RBC</option>
+                      </select>  
+                </div>
+
+                <div class="col-3">
+                    <label for="ground floor type" class="form-label">Ground Floor Type</label>
+                      
+                      <select id="inputState" name="ground_fl_type" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Mud</option>
+                        <option>Brick/Stone</option>
+                        <option>RC</option>
+                        <option>Timber</option>
+                        <option>Other</option>
+                      </select>    
+                </div>
+
+                <div class="col-3">
+                    <label for="other floor type" class="form-label">Other Floor Type</label>
+                      <select id="inputState" name="other_fl_type" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Not applicable</option>
+                        <option>TImber/Bamboo-Mud</option>
+                        <option>Timber-Planck</option>
+                        <option>RCC/RB/RBC</option>
+                      </select>      
+                </div>
+
+                <div class="col-3">
+                    <label for="plan configuration" class="form-label">Plan Configuration</label>
+                      
+                      <select id="inputState" name="plan_configuration" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Rectangular</option>
+                        <option>L-shape</option>
+                        <option>Square</option>
+                        <option>T-shape</option>
+                        <option>Multi-projected</option>
+                        <option>H-shape</option>
+                        <option>U-shape</option>
+                        <option>E-shape</option>
+                        <option>Others</option>
+                        <option>Building with Central Courtyard</option>
+                      </select>      
+                </div>
+
+                <div class="col-3">
+                    <label for="superstructure type" class="form-label">Superstructure Type:</label>
+                      <select id="inputState" name="superstructure_type" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>adobe_mud</option>
+                        <option>mud_mortar_stone</option>
+                        <option>stone_flag</option>
+                        <option>cement_mortar_stone</option>
+                        <option>mud_mortar_brick</option>
+                        <option>cement_mortar_brick</option>
+                        <option>timber</option>
+                        <option>bamboo</option>
+                        <option>rc_non_engineered</option>
+                        <option>rc_engineered</option>
+                        <option>other</option>
+                      </select>        
+                </div>
+
+                <div class="col-3">
+                    <label for="position" class="form-label">Position</label>  
+                      <select id="inputState" name="position" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Not attached</option>
+                        <option>Attached-1 side</option>
+                        <option>Attached-2 side</option>
+                        <option>Attached-3 side</option>
+                      </select>    
+                </div>
+
+                <div class="col-3">
+                    <label for="land surface condition" class="form-label">Land Surface Condition</label>
+                      <select id="inputState" name="land_surface_cond" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Flat</option>
+                        <option>Moderate slope</option>
+                        <option>Steep slope</option>
+                      </select>      
+                </div>
+
+                <div class="col-3">
+                    <label for="condition post earthquake" class="form-label">Condition Post Earthquake</label>
+                      <select id="inputState" name="condition_post_eq" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Damaged-Not used</option>
+                        <option>Damaged-Rubble unclear</option>
+                        <option>Damaged-Used in risk</option>
+                        <option>Damaged-Repaired and used</option>
+                        <option>Damaged-Rubble clear</option>
+                        <option>Not damaged</option>
+                        <option>Damaged-Rubble Clear-New building built</option>
+                        <option>Covered by landslide</option>
+                      </select>        
+                </div>
+
+                <div class="col-3">
+                    <label for="technical solution" class="form-label">Technical Solution Proposed</label>
+                      <select id="inputState" name="tech_soln_proposed" type="text" class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>Reconstruction</option>
+                        <option>Major repair</option>
+                        <option>Minor repair</option>
+                        <option>No need</option>
+                      </select>    
+                </div>
+
+                <div class="btns">
+                    <input type="submit" value="Submit" class="btn btn-confirm">
+                </div>
+          </div>
+          </div>
+          </div>
+  
+  </div>
+</section>
+</form>
+</div>
+  <!-- ======= Footer ======= -->
+ 
+  <footer id="footer">
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Anish Shilpakar</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Developed by Anish Shilpakar with ❤
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'earthquake/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'earthquake/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'earthquake/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'earthquake/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'earthquake/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'earthquake/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'earthquake/js/main.js' %}"></script>
+
+</body>
+
+</html>

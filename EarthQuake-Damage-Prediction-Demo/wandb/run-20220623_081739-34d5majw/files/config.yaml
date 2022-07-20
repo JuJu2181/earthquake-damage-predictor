@@ -1,0 +1,55 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.19
+    framework: sklearn
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+    start_time: 1655951566
+    t:
+      1:
+      - 5
+      - 53
+      - 55
+      4: 3.8.5
+      5: 0.12.19
+      8:
+      - 1
+      - 3
+      - 5
+      10:
+      - 5
+    viz:
+      class_proportions:
+        historyFieldSettings:
+          key: class_proportions
+          x-axis: _step
+        id: wandb/class_proportions/v1
+      confusion_matrix:
+        historyFieldSettings:
+          key: confusion_matrix
+          x-axis: _step
+        id: wandb/confusion_matrix/v1
+      feature_importances:
+        historyFieldSettings:
+          key: feature_importances
+          x-axis: _step
+        id: wandb/feature_importances/v1
+      precision_recall:
+        historyFieldSettings:
+          key: precision_recall
+          x-axis: _step
+        id: wandb/pr_curve/v1
+      roc:
+        historyFieldSettings:
+          key: roc
+          x-axis: _step
+        id: wandb/roc/v1
+      summary_metrics:
+        historyFieldSettings:
+          key: summary_metrics
+          x-axis: _step
+        id: wandb/metrics/v1

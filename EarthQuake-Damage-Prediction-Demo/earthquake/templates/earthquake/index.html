@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <title>Earthquake Building Damage Prediction</title>
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet"
+        />
+
+        <!-- Vendor CSS Files -->
+        <link
+            href="{% static 'earthquake/vendor/aos/aos.css'%}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/bootstrap/css/bootstrap.min.css' %}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/boxicons/css/boxicons.min.css' %}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/glightbox/css/glightbox.min.css' %}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/remixicon/remixicon.css' %}"
+            rel="stylesheet"
+        />
+        <link
+            href="{% static 'earthquake/vendor/swiper/swiper-bundle.min.css' %}"
+            rel="stylesheet"
+        />
+
+        <!-- Template Main CSS File -->
+        <link href="{% static 'earthquake/css/style.css' %}" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center">
+                <h1 class="logo me-auto"><a href="index.html">EQDMGPRED</a></h1>
+                <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                            <a class="nav-link scrollto active" href="#hero"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="#about"
+                                >About Project</a
+                            >
+                        </li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <h1>Earthquake Building Damage Prediction</h1>
+                        <h2>AI based prediction system</h2>
+                        <div
+                            class="d-flex justify-content-center justify-content-lg-start"
+                        >
+                            <a
+                                href="{% url 'professionalUser' %}"
+                                class="btn-get-started scrollto"
+                                >Predict Damage Grade</a
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-6 order-1 order-lg-2 hero-img"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                    >
+                        <img
+                            src="{% static 'earthquake/img/hero-img.png' %}"
+                            class="img-fluid animated"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <main id="main">
+            <!-- ======= About Us Section ======= -->
+            <section id="about" class="about">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>About Earthquake Building Damage Prediction System</h2>
+                    </div>
+
+                    <div class="row content">
+                        <!-- <div class="col-lg-6"> -->
+                        <p>
+                            The project "Earthquake Damage Prediction System" is a Machine learning project developed for Fusemachines AI fellowship program. This system is developed with aim to predict damage of buildings due to eathquake. Currently, our models have been trained and tested using only Nepali earthquake dataset taken from Kaggle.com <a href="https://www.kaggle.com/code/ar89dsl/predicting-building-damage-from-earthquakes/data?select=csv_building_structure.csv"> Dataset </a>. Our system can currently predict the earthquake damage grades on buildings with test f1-score of 90% and train f1-score of 95%. Here, a user will have to enter some details of the building like number of floors, height of building, age etc and then get the damage grade predicted for that building. <br>
+                            You can find the github link for this project below: <br>
+                        </p>
+                        <a href="https://github.com/JuJu2181/earthquake-damage-predictor" class="btn-learn-more">Earthquake Damage Prediction System Github</a>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </section>
+            <!-- End About Us Section -->
+        </main>
+        <!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container footer-bottom clearfix">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Anish Shilpakar</span></strong
+                    >. All Rights Reserved
+                </div>
+                <div class="credits">Website developed by Anish Shilpakar with ❤</div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <div id="preloader"></div>
+        <a
+            href="#"
+            class="back-to-top d-flex align-items-center justify-content-center"
+            ><i class="bi bi-arrow-up-short"></i
+        ></a>
+
+        <!-- Vendor JS Files -->
+        <script src="{% static 'earthquake/vendor/aos/aos.js' %}"></script>
+        <script src="{% static 'earthquake/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'earthquake/vendor/glightbox/js/glightbox.min.js' %}"></script>
+        <script src="{% static 'earthquake/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'earthquake/vendor/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'earthquake/vendor/waypoints/noframework.waypoints.js' %}"></script>
+        <!-- Template Main JS File -->
+        <script src="{% static 'earthquake/js/main.js' %}"></script>
+    </body>
+</html>
