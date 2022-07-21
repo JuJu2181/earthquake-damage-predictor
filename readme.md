@@ -28,7 +28,7 @@ Note: Due to large size of dataset and trained models we couldn't include our mo
  After downloading the dataset put it inside the Codes folder(Same folder in which the notebooks are located).  
  ![Folder Structure](arch1.jpg)  
  Also place the dataset inside EarthQuake-Damage-Prediction-Demo/earthquake/packages
-- Download our model used in demo web app from this link: [RF Model](https://drive.google.com/file/d/1aWRfPs5901mgWIhz_ETmwSYFuWXJkvdW/view?usp=sharing) 
+- Download our model used in demo web app from this link: [RF Model](https://drive.google.com/file/d/1aWRfPs5901mgWIhz_ETmwSYFuWXJkvdW/view?usp=sharing)   
  Then place the model inside EarthQuake-Damage-Prediction-Demo/earthquake/packages
   ![Folder Structure](arch2.jpg)  
 - To run the demo web app
@@ -47,5 +47,5 @@ Note: Due to large size of dataset and trained models we couldn't include our mo
 [Sugam Karki](https://github.com/Magus4450)
 
 ******
-***Feel Free to contact us if you have any confusion***
+***Feel Free to contact us if you have any confusion and It will be nice if you star this repo***
 *****
