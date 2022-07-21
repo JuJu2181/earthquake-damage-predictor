@@ -41,6 +41,11 @@ Note: Due to large size of dataset and trained models we couldn't include our mo
 [Video Link](https://drive.google.com/file/d/1yyLWt5lkUqCut7_Fzmh3cIMME8sHmW__/view?usp=sharing)
 
 
+
+https://user-images.githubusercontent.com/43902648/180209802-05cb4d86-7bd7-4b16-b199-ccbdc5c95360.mp4
+
+
+
 ## Contributors
 [Anish Shilpakar](https://github.com/JuJu2181)  
 [Anushil Timsina](https://github.com/Anushil007)  
