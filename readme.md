@@ -26,11 +26,11 @@ Note: Due to large size of dataset and trained models we couldn't include our mo
 ```
 - Get the dataset from this link: [Dataset](https://www.kaggle.com/code/ar89dsl/predicting-building-damage-from-earthquakes/data?select=csv_building_structure.csv)  
  After downloading the dataset put it inside the Codes folder(Same folder in which the notebooks are located).  
- ![Folder Structure](arch1.jpg)
+ ![Folder Structure](arch1.jpg)  
  Also place the dataset inside EarthQuake-Damage-Prediction-Demo/earthquake/packages
 - Download our model used in demo web app from this link: [RF Model](https://drive.google.com/file/d/1aWRfPs5901mgWIhz_ETmwSYFuWXJkvdW/view?usp=sharing) 
  Then place the model inside EarthQuake-Damage-Prediction-Demo/earthquake/packages
-  ![Folder Structure](arch2.jpg)
+  ![Folder Structure](arch2.jpg)  
 - To run the demo web app
 ```
     cd EarthQuake-Damage-Prediction-Demo
